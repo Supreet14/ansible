@@ -1,0 +1,15 @@
+---
+
+- hosts: webservers
+
+  become: True
+
+  tasks:
+
+    - name: Install packages
+
+      yum:
+
+        name: httpd
+
+        state: latest
